@@ -5,6 +5,7 @@
 (load "f-action.l")
 (load "package://jsk_maps/src/eng2-scene.l")
 
+;忘れ物した動き
 (defun forget nil
   ; 首振り
   (send *fetch* :head :neck-y :joint-angle -45)  
@@ -59,7 +60,7 @@
   (send *ri* :wait-interpolation)
 )
 
-
+;リセットポーズになる
 (defun reset nil
   (send *fetch* :reset-pose)
   (send *ri* :angle-vector (send *fetch* :angle-vector) 5000)
