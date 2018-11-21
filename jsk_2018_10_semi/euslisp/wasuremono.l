@@ -1,9 +1,3 @@
-(load "package://fetcheus/fetch-interface.l")
-(fetch-init)
-
-(load "com.l")
-(load "f-action.l")
-(load "package://jsk_maps/src/eng2-scene.l")
 
 ;忘れ物した動き
 (defun forget nil
@@ -67,11 +61,7 @@
   (send *ri* :wait-interpolation)
 )
 
-
-(setq *eng2-scene* (make-eng2-scene))
-(objects (list *eng2-scene* *fetch*))
-;(print (mapcar #'(lambda (x) (send x :name)) (send s :spots)))
-
+(defun wasuremono.l nil
 (setq table_side (send (send *eng2-scene* :spot "/eng2/7f/room73B2-table-side1") :copy-worldcoords))
 (setq table_side_1 (send table_side :transform (make-coords :pos #f(-500 0 0) :rpy (float-vector 0 0 0))))
 
@@ -92,4 +82,4 @@
 (send *fetch* :move-to table_side_1 :world)
 (send *ri* :move-to table_side_1)
 (send *ri* :wait-interpolation)
-
+)
