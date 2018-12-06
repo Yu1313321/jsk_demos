@@ -24,6 +24,3 @@
   (send *ri* :angle-vector (send *fetch* :angle-vector) 5000)
   (send *ri* :wait-interpolation)
 )
-
-
- 
