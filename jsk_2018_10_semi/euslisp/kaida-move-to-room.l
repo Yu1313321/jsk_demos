@@ -13,6 +13,7 @@
   (send *ri* :move-to room73B2_table_side_offset)
   (send *ri* :wait-interpolation)
 )
+
 (defun go-room-C nil)
 
 (defun get-box-A nil
